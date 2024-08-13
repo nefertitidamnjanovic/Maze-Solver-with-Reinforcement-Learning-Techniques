@@ -1,0 +1,25 @@
+Implementacija: matrica nxn, polja predstavljaju stanja, 
+                kretanje vertikalno ili horizontalno u sledece polje su akcije
+
+Polja mogu biti: 
+ - regularno polje  - r = -1
+ - kazneno polje    - r = -10
+ - zidovi           - zabranjena polja, kretanje na to polje nas vraca odakle smo krenuli
+ - terminalno polje - r = 0, oznacava kretanje
+ - teleport polje   - akcija nas prebacuje u polje koje ne mora biti susedno, jednosmeran, 
+                        stanje teleport polja se smatra istim kao stanje polja u koje nas prebacuje
+ - smrt polje       -
+
+Cilj je naci optimalnu strategiju, vizuelizacija
+
+v(s) = r + gamma * v(s+), gamma in (0,1)
+
+v(s+) = max_{a in A} [h(s,a) + gamma * v(f(s,a))]
+
+Kriterijum zaustavljanja: ||v(s+) - v(s)|| < delta
+
+Interface u pythonu - ABC paket
+
+
+
+
